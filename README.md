@@ -1,12 +1,15 @@
 Experiment--05-Implementation-of-flipflops-using-verilog
 
 AIM:
+
   To implement all the flipflops using verilog and validating their functionality using their functional tables
   
 HARDWARE REQUIRED: 
+
    PC, Cyclone II , USB flasher
    
 SOFTWARE REQUIRED: 
+
     Quartus prime
     
 THEORY:
@@ -130,13 +133,22 @@ RegisterNumber: 22008601
 
 
 module de05(S,R,CLK,Q,QBAR);
+
 input S,R,CLK;
+
 output Q,QBAR;
+
 wire X,Y;
+
 nand(X,S,CLK);
+
 nand(Y,R,CLK);
+
+
 nand(Q,X,QBAR);
+
 nand(QBAR,Y,Q);
+
 endmodule
 
 
@@ -164,13 +176,21 @@ RegisterNumber: 22008601
 
 
 module de051(J,K,CLK,Q,QBAR);
+
 input J,K,CLK;
+
 output Q,QBAR;
+
 wire P,S;
+
 nand(P,J,CLK,QBAR);
+
 nand(S,K,CLK,Q);
+
 nand(Q,P,QBAR);
+
 nand(QBAR,S,Q);
+
 endmodule
 
 
@@ -194,15 +214,25 @@ RegisterNumber: 22008601
 
 
 Program:
+
 module de052(D,CLK,Q,QBAR);
+
 input D,CLK;
+
 output Q,QBAR;
+
 assign DBAR=~D;
+
 wire X,Y;
+
 nand(X,D,CLK);
+
 nand(Y,DBAR,CLK);
+
 nand(Q,X,QBAR);
+
 nand(QBAR,Y,Q);
+
 endmodule
 
 RLT logic:
@@ -226,13 +256,21 @@ RegisterNumber: 22008601
 
 
 module de54(T,CLK,Q,QBAR);
+
 input T,CLK;
+
 output Q,QBAR;
+
 wire S,R;
+
 nand(S,T,CLK,QBAR);
+
 nand(R,T,CLK,Q);
+
 nand(Q,S,QBAR);
+
 nand(QBAR,R,Q);
+
 endmodule
 
 RLT logic:
