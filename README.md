@@ -2,15 +2,15 @@ Experiment--05-Implementation-of-flipflops-using-verilog
 
 AIM:
 
-  To implement all the flipflops using verilog and validating their functionality using their functional tables
+To implement all the flipflops using verilog and validating their functionality using their functional tables
   
 HARDWARE REQUIRED: 
 
-   PC, Cyclone II , USB flasher
+PC, Cyclone II , USB flasher
    
 SOFTWARE REQUIRED: 
 
-    Quartus prime
+Quartus prime
     
 THEORY:
 
@@ -122,34 +122,21 @@ Procedure:
 
 SR flipflop:
 
-PROGRAM:
+    Program for flipflops  and verify its truth table in quartus using Verilog programming.
+    Developed by: MAHALAKSHMI S
+    RegisterNumber: 22008601
 
+program:
 
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
-
-Developed by: MAHALAKSHMI S
-
-RegisterNumber: 22008601
-
-
-module de05(S,R,CLK,Q,QBAR);
-
-input S,R,CLK;
-
-output Q,QBAR;
-
-wire X,Y;
-
-nand(X,S,CLK);
-
-nand(Y,R,CLK);
-
-
-nand(Q,X,QBAR);
-
-nand(QBAR,Y,Q);
-
-endmodule
+    module de05(S,R,CLK,Q,QBAR);
+    input S,R,CLK;
+    output Q,QBAR;
+    wire X,Y;
+    nand(X,S,CLK);
+    nand(Y,R,CLK);
+    nand(Q,X,QBAR);
+    nand(QBAR,Y,Q);
+    endmodule
 
 
 
@@ -165,33 +152,23 @@ endmodule
 
 JK Flipflop:
 
+    Program for flipflops  and verify its truth table in quartus using Verilog programming.
+
+    Developed by: MAHALAKSHMI S
+
+    RegisterNumber: 22008601
+
 Program:
 
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
-
-Developed by: MAHALAKSHMI S
-
-RegisterNumber: 22008601
-
-
-
-module de051(J,K,CLK,Q,QBAR);
-
-input J,K,CLK;
-
-output Q,QBAR;
-
-wire P,S;
-
-nand(P,J,CLK,QBAR);
-
-nand(S,K,CLK,Q);
-
-nand(Q,P,QBAR);
-
-nand(QBAR,S,Q);
-
-endmodule
+    module de051(J,K,CLK,Q,QBAR);
+    input J,K,CLK;
+    output Q,QBAR;
+    wire P,S;
+    nand(P,J,CLK,QBAR);
+    nand(S,K,CLK,Q);
+    nand(Q,P,QBAR);
+    nand(QBAR,S,Q);
+    endmodule
 
 
 RLT logic:
@@ -205,35 +182,22 @@ Timing diagram:
 
 D Flipflop:
 
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
-
-Developed by: MAHALAKSHMI S
-
-RegisterNumber: 22008601
-
-
+    Program for flipflops  and verify its truth table in quartus using Verilog programming.
+    Developed by: MAHALAKSHMI S
+    RegisterNumber: 22008601
 
 Program:
 
-module de052(D,CLK,Q,QBAR);
-
-input D,CLK;
-
-output Q,QBAR;
-
-assign DBAR=~D;
-
-wire X,Y;
-
-nand(X,D,CLK);
-
-nand(Y,DBAR,CLK);
-
-nand(Q,X,QBAR);
-
-nand(QBAR,Y,Q);
-
-endmodule
+    module de052(D,CLK,Q,QBAR);
+    input D,CLK;
+    output Q,QBAR;
+    assign DBAR=~D;
+    wire X,Y;
+    nand(X,D,CLK);
+    nand(Y,DBAR,CLK);
+    nand(Q,X,QBAR);
+    nand(QBAR,Y,Q);
+    endmodule
 
 RLT logic:
 
@@ -245,33 +209,21 @@ Timing diagram:
 
 T Flipflop:
 
-Program:
+    Program for flipflops  and verify its truth table in quartus using Verilog programming.
+    Developed by: MAHALAKSHMI S
+    RegisterNumber: 22008601
 
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
+program:
 
-Developed by: MAHALAKSHMI S
-
-RegisterNumber: 22008601
-
-
-
-module de54(T,CLK,Q,QBAR);
-
-input T,CLK;
-
-output Q,QBAR;
-
-wire S,R;
-
-nand(S,T,CLK,QBAR);
-
-nand(R,T,CLK,Q);
-
-nand(Q,S,QBAR);
-
-nand(QBAR,R,Q);
-
-endmodule
+    module de54(T,CLK,Q,QBAR);
+    input T,CLK;
+    output Q,QBAR;
+    wire S,R;
+    nand(S,T,CLK,QBAR);
+    nand(R,T,CLK,Q);
+    nand(Q,S,QBAR);
+    nand(QBAR,R,Q);
+    endmodule
 
 RLT logic:
 
@@ -280,9 +232,6 @@ RLT logic:
 Timing diagram:
 
 ![Screenshot (51)](https://user-images.githubusercontent.com/122199968/212887864-51930c43-e10d-4c37-bf04-0fd0ec16604b.png)
-
-
-
 
 RESULTS:
 
